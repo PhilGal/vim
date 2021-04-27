@@ -1,0 +1,45 @@
+" Disable arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+" Key mappings
+nnoremap L $
+nnoremap H ^
+
+" Set relative numbers
+" set relativenumber
+
+" Set surround https://github.com/tpope/vim-surround
+set surround
+
+" Use gd to jump to declaration
+nnoremap gd :action GotoDeclaration
+
+nnoremap ,e :action SearchEverywhere<CR>
+nnoremap ,g :action FindInPath<CR>
+nnoremap ,s :action FileStructurePopup<CR>
+nnoremap ,q :action QuickImplementations
+nnoremap ,Q :action QuickTypeDefinition
+nnoremap ,d :action QuickJavaDoc
+
+" Experimental action mappings
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gb :action JumpToLastChange<CR>
+
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
+
+nnoremap <C-CR> :action ShowIntentionActions<CR>
+
+nnoremap ,a :action GotoAction<CR>
+vnoremap ,a :action GotoAction<CR>
